@@ -1,12 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Ticket</title>
-    <!--  -->
-</head>
-<body>
-    
-</body>
+    <!-- tailwind & daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontAwosome -->
+    <script
+      src="https://kit.fontawesome.com/28c020b767.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- my Style-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="navbar bg-base-100 mt-0 md:mt-4 p-2 md:p-4 shadow-xl sticky top-0"
+      >
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg font-medium"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl font-extrabold"
+            >E-Ticket <span class="text-green-500">BD</span></a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-sm font-medium">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn text-sm border border-[#1dd10066] bg-[#1dd10019] font-bold text-[#1DD100]"
+            >Bus<img src="images/bus-icon.png" width="24px"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <main class="p-2 md:px-10">
+      <!-- banner -->
+      <div class="banner rounded-2xl container w-full mx-auto mt-8">
+        <div
+          class="banner-bg rounded-2xl flex flex-col justify-center items-center w-full"
+        >
+          <h1
+            class="text-center font-extrabold text-3xl sm:text-6xl text-white p-4 pt-10 lg:px-16 md:pt-24"
+          >
+            End-to-End Travel with <br /><span class="text-[#1DD100]"
+              >E-Paribahan</span
+            >
+          </h1>
+          <p
+            class="inter text-center mt-2 sm:mt-5 max-w-[500px] p-2 text-white text-sm font-normal"
+          >
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+          <button
+            class="btn my-10 md:mb-24 text-sm sm:text-lg font-bold text-[#030712] bg-[#1DD100] outline-none border-none hover:text-[#42a356]"
+          >
+            <a class="p-2 sm:px-4">Buy Tickets</a>
+          </button>
+        </div>
+        <div class="relative">
+          <div
+            class="p-5 md:p-0 center inter flex flex-col w-full md:flex-row justify-center items-center mx-auto gap-3"
+          >
+            <div
+              class="w-full md:w-auto flex flex-row justify-center gap-3 items-center p-5 px-8 bg-white rounded-3xl border-2 border-b-[#1DD100]"
+            >
+              <img src="images/people.png" alt="" width="48px" />
+              <div class="">
+                <h1 class="text-xl md:text-2xl text-[#030712] font-bold">
+                  500K+
+                </h1>
+                <p class="text-sm text-[#03071299]">Registered users</p>
+              </div>
+            </div>
+            <div
+              class="w-full md:w-auto flex flex-row justify-center gap-3 items-center p-5 px-8 bg-white rounded-3xl border-2 border-b-[#1DD100]"
+            >
+              <img src="images/ticket-cupon.png" alt="" width="48px" />
+              <div class="">
+                <h1 class="text-xl md:text-2xl text-[#030712] font-bold">
+                  1.7 lacks
+                </h1>
+                <p class="text-sm text-[#03071299]">Tickets sold</p>
+              </div>
+            </div>
+            <div
+              class="w-full md:w-auto flex flex-row justify-center gap-3 items-center p-5 px-8 bg-white rounded-3xl border-2 border-b-[#1DD100]"
+            >
+              <img src="images/stoppage.png" alt="" width="48px" />
+              <div class="">
+                <h1 class="text-xl md:text-2xl text-[#030712] font-bold">
+                  80K+
+                </h1>
+                <p class="text-sm text-[#03071299]">Rental partners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+    </main>
+    <footer></footer>
+  </body>
 </html>
