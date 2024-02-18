@@ -1,27 +1,37 @@
 /* font collection */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: "Raleway", sans-serif;
 }
-.inter{
+
+.inter {
     font-family: Inter;
 }
-.center{
+
+.center {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.right-boder{
+
+.right-boder {
     border-right: 1px dashed rgba(3, 7, 18, 0.30);
 }
-.seatid{
-    padding:  8px 16px;
+
+.seatid {
+    padding: 8px 16px;
     border-radius: 12px;
     color: #0307127f;
     font-size: 14px;
@@ -29,8 +39,9 @@ body{
     text-align: center;
     margin: 12px 0px;
 }
-.seat{
-    padding:  8px 22px;
+
+.seat {
+    padding: 8px 22px;
     border-radius: 12px;
     color: #0307127f;
     background-color: #03071219;
@@ -39,7 +50,8 @@ body{
     text-align: center;
     margin: 12px 0px;
 }
-.seat:hover{
+
+.seat:hover {
     cursor: pointer;
     color: white;
     background-color: #1DD100;
@@ -47,41 +59,60 @@ body{
     transform: scale(1.15);
     transition: transform 200ms ease-in-out;
 }
-.activeSeat{
+
+.activeSeat {
     color: white;
     background-color: #1DD100;
     border: 1px solid #1DD100;
     transform: scale(1.15);
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /* table */
-table tr th{
+table tr th {
     padding: 8px 0;
 }
-table tr td{
+
+table tr td {
     padding: 4px 0;
 }
-table tr td:nth-child(3){
+
+table tr td:nth-child(3) {
     text-align: right;
 }
+
 /* banner part */
-.banner{
+.banner {
     background-image: url("../images/banner.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.banner-bg{
+
+.banner-bg {
     background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%);
 }
 
 @media only screen and (max-width: 767px) {
-    .center{
+    .center {
         position: relative;
         left: 0;
         top: 0;
-        transform: translate(0,0);
+        transform: translate(0, 0);
     }
-    .right-boder{
+
+    .right-boder {
         border-right: 0;
         border-bottom: 1px dashed rgba(3, 7, 18, 0.30);
     }
