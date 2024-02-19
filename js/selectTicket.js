@@ -5,7 +5,7 @@ const totalSelectedSeat = document.getElementById("totalSelectedSeat");
 const totalPrice = document.getElementById("totalPrice");
 const grandTotal = document.getElementById("grandTotal");
 const listTable = document.getElementById("listTable");
-const moreSelect = document.getElementById('my_modal');
+const moreSelect = document.getElementById("my_modal");
 var seatCount = 0;
 var sum = 0;
 
@@ -13,22 +13,19 @@ for (let seat of seats) {
   seat.addEventListener("click", function (e) {
     if (!e.target.classList.contains("activeSeat")) {
       seatCount++;
-      if(seatCount <5)
-      {
-      e.target.classList.add("activeSeat"); //highlight the active one
-      let leftSeat = Number(seatLeft.innerText);
-      let newLeftSeat = leftSeat - 1;
-      seatLeft.innerText = newLeftSeat;
-      totalSelectedSeat.innerText = seatCount;
-      sum = sum + 550;
-      totalPrice.innerText = sum;
-      grandTotal.innerText = sum;
-      createItemList(e);
-      
-    }
-    else{
-      moreSelect.showModal()
-    }
+      if (seatCount < 5) {
+        e.target.classList.add("activeSeat"); //highlight the active one
+        let leftSeat = Number(seatLeft.innerText);
+        let newLeftSeat = leftSeat - 1;
+        seatLeft.innerText = newLeftSeat;
+        totalSelectedSeat.innerText = seatCount;
+        sum = sum + 550;
+        totalPrice.innerText = sum;
+        grandTotal.innerText = sum;
+        createItemList(e);
+      } else {
+        moreSelect.showModal();
+      }
     }
   });
 }
@@ -57,7 +54,7 @@ const next = document.getElementById("next");
 phone.addEventListener("keyup", function (e) {
   if (e.target.value.length !== 11) {
     phoneToolTip.classList.remove("hidden");
-    next.setAttribute("disabled",true);
+    next.setAttribute("disabled", true);
   } else {
     phoneToolTip.classList.add("hidden");
     if (seatCount > 0) {
@@ -73,9 +70,11 @@ document.addEventListener("click", function () {
     phoneToolTip.classList.contains("hidden")
   ) {
     next.removeAttribute("disabled");
+    const confirmPopup = document.getElementById('confirmPopup');
+    confirmPopup.showModal();
   }
-//calling cuppon field when selected 4 cuppon
-  if(seatCount == 4){
-    activeCuppon()
+  //calling cuppon field when selected 4 cuppon
+  if (seatCount == 4) {
+    activeCuppon();
   }
 });
