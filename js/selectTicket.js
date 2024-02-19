@@ -70,14 +70,14 @@ document.addEventListener("click", function () {
     phoneToolTip.classList.contains("hidden")
   ) {
     next.removeAttribute("disabled");
-    const confirmPopup = document.getElementById('confirmPopup');
-    next.addEventListener('click',function (){
-      confirmPopup.showModal();
-    })
-   
   }
   //calling cuppon field when selected 4 cuppon
   if (seatCount == 4) {
     activeCuppon();
   }
 });
+//next click to pop up
+const confirmPopup = document.getElementById('confirmPopup');
+next.addEventListener('click',function (){
+  confirmPopup.showModal();
+})
