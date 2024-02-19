@@ -71,7 +71,10 @@ document.addEventListener("click", function () {
   ) {
     next.removeAttribute("disabled");
     const confirmPopup = document.getElementById('confirmPopup');
-    confirmPopup.showModal();
+    next.addEventListener('click',function (){
+      confirmPopup.showModal();
+    })
+   
   }
   //calling cuppon field when selected 4 cuppon
   if (seatCount == 4) {
